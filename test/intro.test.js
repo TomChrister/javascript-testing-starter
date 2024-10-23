@@ -1,5 +1,5 @@
 import {describe, test, it, expect} from 'vitest';
-import {max, fizzBuzz} from '../src/intro.js';
+import {max, fizzBuzz, factorial} from '../src/intro.js';
 
 describe('max', () => {
     it('should return the first argument if it is greater', () => {
@@ -28,5 +28,21 @@ describe('fizzBuzz', () => {
         expect(fizzBuzz(10)).toBe('Buzz');
     })
 
+    it('should return argument as a string if it is not divisible by 3 or 5', () => {
+        expect(fizzBuzz(1)).toBe('1');
+    })
+})
 
+describe('factorial', () => {
+    it('should return 1 if given 0' , () => {
+        expect(factorial(0)).toBe(1);
+    })
+
+    it('should return 1 if given 1' , () => {
+        expect(factorial(1)).toBe(1);
+    })
+
+    it('should return 2 if given 2' , () => {
+        expect(factorial(2)).toBe(2);
+    })
 })
